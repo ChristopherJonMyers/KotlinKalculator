@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Kotlin Kalculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid vh-100 bg-primary">
+            <div class="row pt-2">
+                <div class="col text-center bg-dark text-white md-p-3 vw-100">
+                    <h1 class="d-none d-md-block display-3 font-weight-bold">KOTLIN KALCULATOR</h1>
+                    <h1 class="d-md-none font-weight-bold">KOTLIN KALCULATOR</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center p-0 m-0">
+                <div class="col-12 col-md-10 col-lg-8 col-xl-6 my-auto text-center p-3">
+                    <div class="card border-0 shadow">
+                        <div class="card-header bg-dark text-white ">
+                            <div class="row justify-content-center align-items-center p-0 m-0">
+                                <div class="col-10 p-0 m-0">
+                                    <h1 class="float-right m-2" id="display">Equation Goes Here...</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body bg-secondary py-4">
+                            <div class="row justify-content-center align-items-stretch" id="row1">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="I">I</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="sin">sin(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="cos">cos(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="tan">tan(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-warning btn-block h-100 font-weight-bold" id="C">C</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row2">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="II">II</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="arcsin">arcsin(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="arccos">arccos(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="arctan">arctan(x)</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-danger btn-block h-100 font-weight-bold" id="CE">CE</button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row3">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="III">III</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="inverse">1/x</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="expo">x^y</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="sqrt"><i class="fas fa-square-root-alt"></i></button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="addition"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row4">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="IV">IV</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="1">1</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="2">2</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="3">3</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold num" id="subtraction"><i class="fas fa-minus"></i></button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row5">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="V">V</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="4">4</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="5">5</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="6">6</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold num" id="multiplication"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row6">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="VI">VI</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="7">7</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="8">8</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="9">9</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="division"><i class="fas fa-divide"></i></button>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center align-items-stretch" id="row7">
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-info btn-block h-100 font-weight-bold macro" id="VII">VII</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="signchange"><i class="fas fa-plus"></i> / <i class="fas fa-minus"></i></button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-light btn-block h-100 font-weight-bold num" id="0">0</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-dark btn-block h-100 font-weight-bold" id="decimal">.</button>
+                                </div>
+                                <div class="col-2 p-2">
+                                    <button class="btn btn-success btn-block h-100 font-weight-bold" id="calculate"><i class="fas fa-equals"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="out/production/sampleapp/lib/kotlin.js"></script>
+        <script type="text/javascript" src="out/production/sampleapp/sampleapp.js"></script>
+    </body>
+</html>
